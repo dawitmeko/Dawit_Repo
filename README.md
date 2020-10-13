@@ -27,7 +27,7 @@ Load balancing ensures that the application will be highly balanced, in addition
 - _TODO: What aspect of security do load balancers protect? Load Balancing plays an important security role as computing moves evermore to the cloud. The off-loading function of a load balancer defends an organization against distributed denial-of-service (DDoS) attacks.
 What is the advantage of a jump box?It is used as a gateway for traffic coming from HTTP and provide connection to Web servers.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the other servers and system networks.
 - _TODO: What does Filebeat watch for? It is installed as an agent on your servers, Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.- 
 _TODO: What does Metricbeat record? It helps you monitor your servers by collecting metrics from the system and services running on the server, such as: Apache. HAProxy.
 
@@ -55,7 +55,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box |      No             |    |
+| Jump Box |      No             |    47.35.129.50
 |          |                     |                      |
 |          |                     |                      |
 
@@ -66,7 +66,13 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
+- Gathering facts
+- Download filebeat deb
+- Install filebeat deb
+- Drop in filebeat.yml
+- enable and configure  system module
+- Setup filebeat
+- Start filebeat services
 - ...
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
